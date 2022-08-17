@@ -1,7 +1,5 @@
 package com.genspark.Academy_Backend.service;
-
 import com.genspark.Academy_Backend.model.Login;
-
 import java.util.List;
 
 public interface LoginService {
@@ -15,4 +13,5 @@ public interface LoginService {
     Login updateLogin(Login login);
 
     String deleteLogin(int id);
+
 }

@@ -27,9 +27,24 @@ public class StudentController {
         return studentService.findStudentById(id);
     }
 
-    @GetMapping("/email/{email}")
+    @GetMapping("/students/email/{email}")
     public Student findStudentByEmail(@PathVariable String email){
 
         return studentService.findStudentByEmail(email);
+    }
+
+    @PostMapping("/students")
+    public Student createStudent(@RequestBody Student student){
+        return studentService.saveStudent(student);
+    }
+
+    @PutMapping("/students")
+    public Student updateStudent(@RequestBody Student student){
+        return studentService.updateStudent(student);
+    }
+
+    @DeleteMapping("/students/{id}")
+    public String deleteStudent(@PathVariable int id){
+        return studentService.deleteStudentById(id);
     }
 }

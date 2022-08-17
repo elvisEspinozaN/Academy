@@ -1,5 +1,4 @@
 package com.genspark.Academy_Backend.model;
-
 import javax.persistence.*;
 
 @Entity
@@ -14,11 +13,18 @@ public class Student {
     private String lastName;
     private String email;
 
-    @ManyToOne()
-    @JoinColumn(name="career_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="career_id", referencedColumnName = "career_id")
     private Career career;
 
     public Student(){}
+
+    public Student(String firstName, String lastName, String email, Career career) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.career = career;
+    }
 
     public int getStudentId() {
         return studentId;

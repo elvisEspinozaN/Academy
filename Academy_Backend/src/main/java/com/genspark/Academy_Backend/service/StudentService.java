@@ -8,12 +8,12 @@ public interface StudentService {
 
     Student findStudentById(int id);
 
-    Student createStudent(Student student);
+    Student saveStudent(Student student);
 
     Student updateStudent(Student student);
 
     String deleteStudentById(int id);
 
     Student findStudentByEmail(String email);
-
 }
+

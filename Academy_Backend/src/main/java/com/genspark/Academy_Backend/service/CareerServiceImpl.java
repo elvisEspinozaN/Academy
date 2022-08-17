@@ -8,12 +8,15 @@ import java.util.Optional;
 
 @Service
 public class CareerServiceImpl implements CareerService{
+
     @Autowired
     CareerDao careerDao;
+
     @Override
     public List<Career> findAllCareer() {
         return careerDao.findAll();
     }
+
     @Override
     public Career findCareerById(int id) {
         Career c;
@@ -27,18 +30,22 @@ public class CareerServiceImpl implements CareerService{
 
         return c;
     }
+
     @Override
     public Career createCareer(Career career) {
         return careerDao.save(career);
     }
+
     @Override
     public Career updateCareer(Career career) {
         return careerDao.save(career);
     }
+
     @Override
     public String deleteCareer(int id) {
         careerDao.deleteById(id);
 
         return "The career "+ id + "was deleted";
     }
+
 }

@@ -1,7 +1,5 @@
 package com.genspark.Academy_Backend.model;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name="tbl_career")
@@ -12,9 +10,6 @@ public class Career {
     @Column(name="career_id")
     private int careerId;
     private String name;
-
-    @OneToMany(mappedBy = "career")
-    private List<Student> student;
 
     public Career(){}
 
@@ -34,20 +29,11 @@ public class Career {
         this.name = name;
     }
 
-    public List<Student> getStudent() {
-        return student;
-    }
-
-    public void setStudent(List<Student> student) {
-        this.student = student;
-    }
-
     @Override
     public String toString() {
         return "Career{" +
                 "careerId=" + careerId +
                 ", name='" + name + '\'' +
-                ", student=" + student +
                 '}';
     }
 }

@@ -1,5 +1,4 @@
 package com.genspark.Academy_Backend.model;
-
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +14,12 @@ public class Login {
     private boolean admin;
 
     public Login(){}
+
+    public Login(String userName, String password, boolean admin) {
+        this.userName = userName;
+        this.password = password;
+        this.admin = admin;
+    }
 
     public int getLoginId() {
         return loginId;
