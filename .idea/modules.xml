@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Academy.iml" filepath="$PROJECT_DIR$/.idea/Academy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Academy_Backend/Academy_Backend.iml" filepath="$PROJECT_DIR$/Academy_Backend/Academy_Backend.iml" />
+    </modules>
+  </component>
+</project>
