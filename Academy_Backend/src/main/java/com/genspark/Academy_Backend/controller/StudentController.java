@@ -1,5 +1,6 @@
 package com.genspark.Academy_Backend.controller;
 import com.genspark.Academy_Backend.model.Student;
+import com.genspark.Academy_Backend.service.EmailService;
 import com.genspark.Academy_Backend.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -47,4 +48,5 @@ public class StudentController {
     public String deleteStudent(@PathVariable int id){
         return studentService.deleteStudentById(id);
     }
+
 }
