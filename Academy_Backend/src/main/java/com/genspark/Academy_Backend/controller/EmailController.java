@@ -15,8 +15,8 @@ public class EmailController {
     private EmailService emailService;
 
     @GetMapping("/sendEmail")
-    public void sendEmail(@RequestParam String mailto, @RequestParam String fullname){
-        emailService.sendEmail(mailto, fullname);
+    public String sendEmail(@RequestParam String mailto, @RequestParam String fullname){
+        return emailService.sendEmail(mailto, fullname);
     }
 
 }

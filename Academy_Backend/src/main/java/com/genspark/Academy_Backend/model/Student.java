@@ -4,7 +4,6 @@ import javax.persistence.*;
 @Entity
 @Table(name="tbl_student")
 public class Student {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="student_id")
@@ -12,7 +11,6 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
-
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="career_id", referencedColumnName = "career_id")
     private Career career;
