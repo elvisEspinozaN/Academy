@@ -4,7 +4,6 @@ import javax.persistence.*;
 @Entity
 @Table(name="tbl_login")
 public class Login {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="login_id")

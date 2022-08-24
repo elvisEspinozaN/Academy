@@ -8,7 +8,6 @@ import java.util.List;
 @RestController
 @RequestMapping("api")
 public class CareerController {
-
     @Autowired
     CareerService careerService;
 
@@ -16,23 +15,19 @@ public class CareerController {
     public List<Career> findAllCareer(){
         return careerService.findAllCareer();
     }
-
     @GetMapping("/careers/{id}")
     public Career findCareerById(@PathVariable int id){
         return careerService.findCareerById(id);
     }
-
     @PostMapping("/careers")
     public Career createCareer(@RequestBody Career career){
         return careerService.createCareer(career);
     }
-
     @PutMapping("/careers")
     public Career updateCareer(@RequestBody Career career){
         return careerService.updateCareer(career);
     }
-
-    @DeleteMapping("/careers")
+    @DeleteMapping("/careers/{id}")
     public String deleteCareer(@PathVariable int id){
         careerService.deleteCareer(id);
 

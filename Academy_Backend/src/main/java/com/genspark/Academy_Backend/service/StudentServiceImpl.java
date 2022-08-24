@@ -35,7 +35,7 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public String deleteStudentById(int id) {
         studentDao.deleteById(id);
-        return "The student"+ id + " was deleted";
+        return "The student "+ id + " was deleted";
     }
 
     @Override

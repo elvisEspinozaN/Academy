@@ -10,7 +10,7 @@ public class EmailService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    public void sendEmail(String toEmail, String fullName){
+    public String sendEmail(String toEmail, String fullName){
 
         String url = "https://www.google.com/";
         String subject = "Action Required - Thank you for your registration";
@@ -18,7 +18,7 @@ public class EmailService {
         body += "    Please click the link below to create your credentials:\n\n";
         body+= "click here: " + url + "\n\n";
         body += "Thank you,\n";
-        body += "The Academy Team";
+        body += "The EM Academy Team";
 
 
         SimpleMailMessage message = new SimpleMailMessage();
@@ -28,7 +28,7 @@ public class EmailService {
         message.setText(body);
         javaMailSender.send(message);
 
-        System.out.println("EMail sent successfully");
+        return "EMail sent successfully";
     }
 
 }

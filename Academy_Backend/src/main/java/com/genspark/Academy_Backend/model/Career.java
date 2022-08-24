@@ -4,13 +4,11 @@ import javax.persistence.*;
 @Entity
 @Table(name="tbl_career")
 public class Career {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="career_id")
     private int careerId;
     private String name;
-
     public Career(){}
 
     public int getCareerId() {
